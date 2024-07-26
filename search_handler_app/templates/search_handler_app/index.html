@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>Search It </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shotcut icon" href="images/google-icon.svg">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  </head>
+  <body>
+    <div class="content">
+      <div class="search-wrapper">
+        <span class="search-logo">
+          <img src="{% static 'images/google.png' %}" alt="google img" />
+        </span>
+        <div class="search-bar">
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+
+          <form action="/search/" class="search-form" method="post"> {% csrf_token %}
+          <input type="text" name="query" autofocus="" />
+
+          
+        </div>
+        <div class="search-buttons">
+          <button class="a" type="submit" name="btnK">Search</button>
+         
+        </div>
+        </form>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>

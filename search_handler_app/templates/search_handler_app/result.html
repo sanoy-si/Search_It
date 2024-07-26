@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE  html>
+<html>
+  <head>
+    <link rel = "stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+  <body>
+      
+      <article class="leaderboard">
+        <header>
+          <h1 class="leaderboard__title"><span class="leaderboard__title--top">Documents Rank</span><span class="leaderboard__title--bottom">based on similarity score</span></h1>
+        </header>
+        
+        <main class="leaderboard__profiles">
+          {% for doc_name, score, path in ranked%}
+            <a href="{% static 'documents/'|add:doc_name %}">
+              <article class="leaderboard__profile">
+                <span class="leaderboard__name">{{doc_name}}</span>
+                <span class="leaderboard__value">{{score|floatformat:5 }}</span>
+              </article>
+            </a>
+          {%endfor%}
+        
+        </main>
+      </div>
+
+  </body>
+</html>
