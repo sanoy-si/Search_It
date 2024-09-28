@@ -1,4 +1,4 @@
-# Search_it Simple Search Engine
+# Search_it
 
 This project is a simple search engine that ranks documents using a vector space model and cosine similarity. The web application is built with Django for the backend and HTML, CSS, Bootstrap, and JavaScript for the frontend.
 
